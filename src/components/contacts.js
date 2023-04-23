@@ -1,30 +1,36 @@
-import { useState } from "react"
+import { useEffect, useState } from "react"
 
-function Contacts(){
-    const [number, setNumber] = useState(0)
+function Contacts({users, setUserArr}){
     const [form, setForm] = useState({phone:'', name: ''})
-    const [userArr, setUserArr] = useState([])
 
     function putUser(){
-        setUserArr([...userArr, form])   
-        
+        if(form.name == '' || form.phone== '') return    
+        setUserArr([...users, form])   
+        setForm({phone:'', name:''})
     }
      
+    useEffect(()=> {
+        console.table(users)
+        
+    },
+    [users])
+
+
     const onChangeInput = (e) => {
-        const inputName = e.target.name
-        const input = e.target.value
-        setForm({...form, [inputName]: input})
+        setForm({...form, [e.target.name]: e.target.value})
         
     }
 
     return (
         <div>
-            <div className="container">
+            <div >
                 <label htmlFor="phone">phone</label>
-                <input name='phone' onChange={onChangeInput} type="text" />
+                <input name='phone' value={form.phone} onChange={onChangeInput} type="text" />
                 <label htmlFor="name">name</label>
-                <input name='name' onChange={onChangeInput} type="text" />
-                <button onClick={putUser}>Add to list</button>
+                <input name='name' value={form.name} onChange={onChangeInput} type="text" />
+                <div className="btn">
+                    <button onClick={putUser}>Add to list</button>
+                </div>
             </div>
 
         </div>
