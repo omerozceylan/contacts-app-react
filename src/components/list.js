@@ -22,6 +22,7 @@ function List({users}){
             onChange={(e)=> SetFilterText(e.target.value)}
             />
            <div>{filtered.map((user,i)=>(<li key={i}>name: {user.name} &nbsp; - &nbsp; phone:  {user.phone}</li>))}</div>
+           {Object.keys(filtered).length === 0 && <div className='warnMessage'>'Filtrenize uygun kullanıcı bulunumadı.</div>}
         </div>
         
     )
