@@ -23,6 +23,9 @@ function Contacts({users, setUserArr}){
 
     return (
         <div>
+            <div className="title-container">
+                <h2 className="title">contacts app</h2>
+            </div>
             <div >
                 <label htmlFor="phone">phone</label>
                 <input name='phone' autocomplete="off" value={form.phone} onChange={onChangeInput} type="text" />
