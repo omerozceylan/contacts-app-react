@@ -4,10 +4,10 @@ import List from "./list"
 
 function Form(){
     const [userArr, setUserArr] = useState([
-        {name:'omer', phone:0554355123},
-        {name:'murat', phone:056234645},
-        {name:'johny', phone:053246313},
-        {name:'alex', phone:051236334}
+        {name:'omer', phone: 554324355123},
+        {name:'murat', phone: 5623234645},
+        {name:'johny', phone: 53234246313},
+        {name:'alex', phone: 51232436334}
     ])
 
     return (
