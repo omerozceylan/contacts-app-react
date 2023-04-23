@@ -25,9 +25,9 @@ function Contacts({users, setUserArr}){
         <div>
             <div >
                 <label htmlFor="phone">phone</label>
-                <input name='phone' value={form.phone} onChange={onChangeInput} type="text" />
+                <input name='phone' autocomplete="off" value={form.phone} onChange={onChangeInput} type="text" />
                 <label htmlFor="name">name</label>
-                <input name='name' value={form.name} onChange={onChangeInput} type="text" />
+                <input name='name' autocomplete="off" value={form.name} onChange={onChangeInput} type="text" />
                 <div className="btn">
                     <button onClick={putUser}>Add to list</button>
                 </div>

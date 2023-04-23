@@ -22,11 +22,13 @@ body {
   flex-direction: column;
   width: 400px;
   padding: 40px;
-  background-color: #e0dadae8;
+  box-shadow: rgba(0, 0, 0, 0.19) 0px 10px 20px, rgba(0, 0, 0, 0.23) 0px 6px 6px;
+  background-color: #54666b54;
 }
 
 ul,li {
   list-style-type: none;
+  box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 2px 6px 2px;
 }
 
 li {
@@ -49,7 +51,9 @@ button {
   color: black;
   background-color: #B3E5BE;
   transition: 0.3s;
+  cursor: pointer;
   border-radius: 5px;
+  box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 2px 6px 2px;
 }
 
 button:hover {
